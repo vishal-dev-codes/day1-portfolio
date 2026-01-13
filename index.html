@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <div class="card">
+  <div class="card hero">
     <h1>Hi, I'm Vishal 👋</h1>
     <p>I’m learning Web Development and building projects daily.</p>
     <a class="btn" href="https://github.com/vishal-dev-codes" target="_blank">
@@ -25,28 +25,33 @@
       <li>JavaScript (Starting)</li>
     </ul>
   </div>
-
-  <div class="card">
-    <h2>Goal</h2>
-    <p>Build 10 projects in 30 days and become internship ready.</p>
-  </div>
-  <div class="card">
+<div class="card">
   <h2>Contact Me</h2>
 
-  <p>
+  <p class="contact-line">
     📧 Email:
-    <a href="vishal.official.mail.id@gmail.com">vishal.official.mail.id@gmail.com</a>
+    <a href="mailto:vishal.official.mail.id@gmail.com">
+      vishal.official.mail.id@gmail.com
+    </a>
   </p>
 
-  <form>
-    <label>Your Name</label>
-    <input type="text" placeholder="Enter your name" required />
+  <form class="contact-form">
+    <div class="form-row">
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" placeholder="Enter your name" required />
+      </div>
 
-    <label>Your Email</label>
-    <input type="email" placeholder="Enter your email" required />
+      <div class="form-group">
+        <label>Your Email</label>
+        <input type="email" placeholder="Enter your email" required />
+      </div>
+    </div>
 
-    <label>Your Message</label>
-    <textarea rows="4" placeholder="Type your message" required></textarea>
+    <div class="form-group">
+      <label>Your Message</label>
+      <textarea rows="5" placeholder="Type your message" required></textarea>
+    </div>
 
     <button class="btn" type="submit">Send</button>
   </form>

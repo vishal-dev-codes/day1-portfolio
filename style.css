@@ -1,37 +1,123 @@
+/* ===== Global ===== */
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Arial, sans-serif;
-  background: #f3f4f6;
   margin: 0;
   padding: 30px;
+
+  /* Background gradient + soft pattern */
+  background: radial-gradient(circle at top left, #dbeafe, #f5f3ff, #fdf2f8);
+  min-height: 100vh;
 }
 
+/* ===== Card Design ===== */
 .card {
-  background: white;
-  padding: 20px;
-  margin-bottom: 15px;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  background: rgba(255, 255, 255, 0.85);
+  padding: 22px;
+  margin-bottom: 18px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
 }
 
+/* ===== Headings ===== */
+h1 {
+  margin-top: 0;
+  font-size: 34px;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+/* ===== Button ===== */
 .btn {
   display: inline-block;
-  margin-top: 10px;
-  padding: 10px 16px;
-  background: black;
+  margin-top: 12px;
+  padding: 12px 18px;
+  background: linear-gradient(135deg, #111827, #374151);
   color: white;
   text-decoration: none;
-  border-radius: 10px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  width: fit-content;
 }
-form {
+
+.btn:hover {
+  transform: translateY(-2px);
+  transition: 0.2s;
+  opacity: 0.95;
+}
+
+/* ===== List ===== */
+ul {
+  padding-left: 18px;
+}
+
+/* ===== Contact Form Styling ===== */
+.contact-line {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.contact-form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+label {
+  font-weight: bold;
 }
 
 input, textarea {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
   border: 1px solid #d1d5db;
-  border-radius: 8px;
+  border-radius: 12px;
   font-size: 14px;
+  outline: none;
+}
+
+input:focus, textarea:focus {
+  border: 1px solid #6366f1;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 700px) {
+  body {
+    padding: 18px;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+}
+.hero {
+  background: linear-gradient(135deg, rgba(59,130,246,0.15), rgba(168,85,247,0.15));
+  border: 1px solid rgba(99, 102, 241, 0.25);
 }
